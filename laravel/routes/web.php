@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\GuestController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
 
-Route::get('/guest-login', [GuestController::class, 'index'])->name("loginGuest");
+Route::post('/guest', [GuestController::class, 'index'])->name("guest");
 
-Route::get('/employee-login', [EmployeeController::class, 'index'])->name("loginEmployee");
+Route::post('/employee-login', [EmployeeController::class, 'index'])->name("loginEmployee");

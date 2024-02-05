@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->timestamp('timestamp');
+            $table->foreignId('table_id');
+            $table->text('notes');
             $table->timestamps();
         });
     }

@@ -13,14 +13,14 @@
         </figure>
         <h1>The Gourmet's Gourmet Gourmet</h1>
     </header>
-    <main>
-        <form action="{{ route('loginEmployee') }}" method="POST">
+    <main class='welcomeForms'>
+        <form class='welcomeForm' action="{{ route('guest') }}" method="POST">
             @csrf
-            <input type="submit" value="Continue as Employee"></input>
+            <input class='button' type="submit" value="Continue as Guest"></input>
         </form>
-        <form action="{{ route('guest') }}" method="POST">
+        <form class='welcomeForm' action="{{ route('loginEmployee') }}" method="POST">
             @csrf
-            <input type="submit" value="Continue as Guest"></input>
+            <input class='button' type="submit" value="Continue as Employee"></input>
         </form>
     </main>
     @include('layout.footer')

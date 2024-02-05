@@ -9,6 +9,6 @@
 <body>
     @include('layout.employee.header')
     @yield('content')
-    @include('layout.employee.footer')
+    @include('layout.footer')
 </body>
 </html>

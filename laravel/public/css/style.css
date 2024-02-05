@@ -3,12 +3,25 @@
     src: url('/assets/Futura.ttf');
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: black;
+    font-family: 'Futura';
+    color: white;
+}
+
 header {
     display: flex;
-    margin: auto;
+    margin: 0px;
     flex-direction: column;
     align-items: center;
     background-color: black;
+    border: white double 5px;
+    border-radius: 10px;
 }
 
 header figure {
@@ -19,7 +32,26 @@ header img {
     height: 100px;
 }
 
-h1 {
-    font-family: Futura;
+/* Welcome page */
+.welcomeForms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px;
+}
+
+.button {
+    font-family: 'Futura';
+    font-size: 22px;
+    padding: 5px;
     color: white;
+    background-color: black;
+    border: white solid 3px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    scale: 1.2;
+    background-color: darkgray;
 }

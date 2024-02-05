@@ -1,12 +1,11 @@
-@extends('layout.layout')
+@extends('layout.guest.layout')
 
 @section('title')
-    {{ env('APP_NAME') . ' - Home' }}
+    {{ env('APP_NAME') . ' - Reserve Table' }}
 @endsection
 
 @section('content')
     <main>
-
 
     </main>
 @endsection

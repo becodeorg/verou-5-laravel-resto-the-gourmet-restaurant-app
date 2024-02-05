@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    @include('layout.header')
+    @include('layout.employee.header')
     @yield('content')
-    @include('layout.footer')
+    @include('layout.employee.footer')
 </body>
 </html>

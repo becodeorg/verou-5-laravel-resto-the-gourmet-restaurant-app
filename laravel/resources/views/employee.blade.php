@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('layout.employee.layout')
 
 @section('title')
     {{ env('APP_NAME') . ' - Home' }}

@@ -22,6 +22,6 @@ Route::get('/', [HomeController::class, 'index'])->name("home");
 Route::post('/guest', [GuestController::class, 'index'])->name("guest");
 Route::post('/employee-login', [EmployeeController::class, 'index'])->name("loginEmployee");
 
-Route::get('/guest/home', [GuestController::class, "index"])->name('homeGuest');
-Route::get('/guest/menu', [GuestController::class, "menu"])->name('menu');
-Route::get('/guest/reserve', [GuestController::class, "reserve"])->name('reserve');
+Route::get('/guest', [GuestController::class, "index"])->name('homeGuest');
+Route::get('/menu', [GuestController::class, "menu"])->name('menu');
+Route::get('/reserve', [GuestController::class, "reserve"])->name('reserve');

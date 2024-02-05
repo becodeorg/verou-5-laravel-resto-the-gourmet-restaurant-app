@@ -5,9 +5,9 @@
     <h1 class="header-h1">The Gourmet's Gourmet Gourmet</h1>
     <nav class="header-nav">
         <ul class="header-ul">
-            <li><a href="{{ route('guest') }}">Home</a></li>
-            <li><a href="{{ route('menu') }}">Menu</a></li>
-            <li><a href="{{ route('reserve') }}">Reserve Table</a></li>
+            <li class='nav-button'><a href="{{ route('guest') }}">Home</a></li>
+            <li class='nav-button'><a href="{{ route('menu') }}">Menu</a></li>
+            <li class='nav-button'><a href="{{ route('reserve') }}">Reserve Table</a></li>
         </ul>
     </nav>
 </header>

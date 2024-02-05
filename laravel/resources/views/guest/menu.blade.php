@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <main>
+    <main class='menu-bg'>
         <figure class="chef-warning">
             <img src="{{ asset('assets/the-gourmet.webp') }}" alt="">
             <figcaption>DON'T ORDER OFF MENU!!!</figcaption>

@@ -6,7 +6,7 @@
     <title>@yield('title', 'The Gourmet')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body>
+<body class='homepage-body'>
     <header class="header">
         <figure class="header-fig">
             <a href="{{route('home')}}"><img class="header-img" src="{{ asset('assets/chef-hat.webp') }}" alt="A chef's hat out of the critically acclaimed 2011 video game, The Elder Srolls V: Skyrim."></a>

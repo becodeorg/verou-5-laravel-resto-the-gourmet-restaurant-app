@@ -14,8 +14,17 @@ body {
     color: white;
 }
 
+.homepage-body {
+    background-image: url('/assets/tavern.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    background-position-y: 10%;
+}
+
 main {
-    margin: 40px;
+    padding: 40px;
+    padding-top: 10px;
 }
 
 /* WELCOME */
@@ -40,6 +49,16 @@ main {
 
 .header-h1 {
     margin: 10px;
+}
+
+.header-nav {
+    width: 80%;
+}
+
+.header-ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
 }
 
 
@@ -92,6 +111,7 @@ main {
     width: 100%;
     text-align: center;
     background-color: black;
+    border-top: solid white 2px;
 }
 
 .footer-text {
@@ -99,16 +119,28 @@ main {
 }
 
 /* MENU */
+body {
+    background-image: url('/assets/parchment.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .menu-list {
     list-style-type: none;
 }
 
 .chef-warning {
     margin: auto;
-    width: 100%;
+    width: fit-content;
+    aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 50px;
+    border: 3px solid white;
+    border-radius: 600px;
+    background-color: black;
 }
 .chef-warning img {
     height: 200px;

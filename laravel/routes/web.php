@@ -21,6 +21,7 @@ Route::get('/', [HomeController::class, 'index'])->name("home");
 
 Route::post('/guest', [GuestController::class, 'index'])->name("guest");
 Route::post('/employee-login', [EmployeeController::class, 'login'])->name("loginEmployee");
+Route::post('/employee-logout', [EmployeeController::class, 'logout'])->name("logout");
 
 Route::prefix('guest')->group(function() {
     Route::get('/', [GuestController::class, "index"])->name('homeGuest');

@@ -22,4 +22,11 @@ class EmployeeController extends Controller
             return back()->withErrors(['employeePass' => 'Invalid username or password.'])->withInput();
         }
     }
+
+    public function logout () 
+    {
+        if (auth()->check()) auth()->logout();
+
+        return redirect()->route('home');
+    }
 }

@@ -7,13 +7,17 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function index (Request $request) 
+    public function index ()
+    {
+        return view('employee');
+    }
+    public function login (Request $request) 
     {
         $employeeName = $request->employeeName;
         $password = $request->employeePass;
         
         if (auth()->attempt(['name' => $employeeName, 'password' => $password])) {
-            return redirect()->route('loginEmployee');
+            return redirect()->route('homeEmployee');
         } else {
             return back()->withErrors(['employeePass' => 'Invalid username or password.'])->withInput();
         }

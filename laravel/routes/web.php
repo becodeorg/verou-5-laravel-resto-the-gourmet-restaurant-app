@@ -3,6 +3,7 @@
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,9 +27,10 @@ Route::post('/employee-logout', [EmployeeController::class, 'logout'])->name("lo
 Route::prefix('guest')->group(function() {
     Route::get('/', [GuestController::class, "index"])->name('homeGuest');
     Route::get('/menu', [GuestController::class, "menu"])->name('menu');
-    Route::get('/reserve', [GuestController::class, "reserve"])->name('reserve');
 });
 
 Route::prefix('employee')->group(function() {
     Route::get('/', [EmployeeController::class, "index"])->name('homeEmployee');
 });
+
+Route::resource('/reservations', ReservationController::class);

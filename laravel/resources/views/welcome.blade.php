@@ -1,12 +1,19 @@
-@extends('layout.layout')
-
-@section('title')
-    {{ env('APP_NAME') . ' - Home' }}
-@endsection
-
-@section('content')
-    <main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'The Gourmet')</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="{{ asset('assets/chef-hat.webp') }}" alt="A chef's hat out of the critically acclaimed 2011 video game, The Elder Srolls V: Skyrim.">
+        </figure>
         <h1>The Gourmet's Gourmet Gourmet</h1>
+    </header>
+    <main>
         <form action="{{ route('loginEmployee') }}" method="POST">
             @csrf
             <input type="submit" value="Continue as Employee"></input>
@@ -16,4 +23,6 @@
             <input type="submit" value="Continue as Guest"></input>
         </form>
     </main>
-@endsection
+    @include('layout.footer')
+</body>
+</html>

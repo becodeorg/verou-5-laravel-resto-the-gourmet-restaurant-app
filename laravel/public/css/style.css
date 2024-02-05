@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('/assets/Futura.ttf');
+}
+
+header {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+header figure {
+    margin: 0px;
+}
+
+header img {
+    height: 100px;
+}
+
+h1 {
+    font-family: Futura;
+    color: white;
+}

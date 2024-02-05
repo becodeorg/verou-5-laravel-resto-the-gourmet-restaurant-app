@@ -9,6 +9,16 @@ class GuestController extends Controller
 {
     public function index () 
     {
-        return view ('guest');
+        return view ('guest.index');
+    }
+
+    public function menu () 
+    {
+        return view ('guest.menu');
+    }
+
+    public function reserve () 
+    {
+        return view ('guest.reserve');
     }
 }

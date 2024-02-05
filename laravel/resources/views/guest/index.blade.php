@@ -7,5 +7,7 @@
 @section('content')
     <main>
         <p>Home</p>
+
+        <img src="{{ asset('assets/placeholder.jpg') }}" alt="placeholder">
     </main>
 @endsection

@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
+
+Route::get('/guest-login', [GuestController::class, 'index'])->name("loginGuest");
+
+Route::get('/employee-login', [EmployeeController::class, 'index'])->name("loginEmployee");

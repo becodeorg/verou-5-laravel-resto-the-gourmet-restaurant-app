@@ -11,8 +11,19 @@
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
-      events: @json($events)
+        initialView: 'dayGridMonth',
+        eventTimeFormat: {
+            hour: '2-digit',
+            minute: '2-digit',
+            omitZeroMinutes: 'false',
+            hour12: false
+        },
+        eventClick: function(info) {
+            let locationString = '{{ route("reservations.edit", ":reservationId") }}';
+            locationString = locationString.replace(":reservationId", info.event.id);
+            window.location.href = locationString;
+        },
+        events: @json($events)
     });
     calendar.render();
   });

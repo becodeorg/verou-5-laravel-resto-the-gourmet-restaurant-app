@@ -31,7 +31,7 @@ class ReservationController extends Controller
         $table = $request->reservationTable;
         $notes = $request->reservationNotes;
 
-        $dateTime = $date . ' ' . $time;
+        $dateTime = $date . ' ' . $time . ':00';
         $carbonDateTime = Carbon::parse($dateTime);
         $timestamp = $carbonDateTime;
 
@@ -44,5 +44,14 @@ class ReservationController extends Controller
         ]);
 
         return redirect()->route("homeGuest");
+    }
+
+    public function edit($id)
+    {
+        $reservation = Reservation::find($id);
+        $tables = Table::all();
+
+        if ($reservation) 
+            return view('employee.edit', ['reservation' => $reservation, 'tables' => $tables]);
     }
 }

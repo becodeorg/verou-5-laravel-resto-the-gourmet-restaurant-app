@@ -19,13 +19,13 @@
             <div>
                 <h2 class="title">Contact</h2>
                 <ul>
-                    <li>Monday : 00:00 - 00:00</li>
-                    <li>Tuesday : 00:00 - 00:00</li>
-                    <li>Wednesday : 00:00 - 00:00</li>
-                    <li>Thurstday : 00:00 - 00:00</li>
-                    <li>Friday : 00:00 - 00:00</li>
-                    <li>Saturtad : 00:00 - 00:00</li>
-                    <li>Sunday : 00:00 - 00:00</li>
+                    <li>Monday : 12:00 - 23:00</li>
+                    <li>Tuesday : 12:00 - 23:00</li>
+                    <li>Wednesday : 12:00 - 23:00</li>
+                    <li>Thurstday : 12:00 - 23:00</li>
+                    <li>Friday : 12:00 - 23:00</li>
+                    <li>Saturtad : 12:00 - 23:00</li>
+                    <li>Sunday : 12:00 - 23:00</li>
                 </ul>
             </div>
 
@@ -35,7 +35,7 @@
         
         <div>
             <h2>Reservations</h2>
-            <a href="reservation" class="button">Reservation</a>
+            <a href="{{ route('reservations.create') }}" class="button">Reservation</a>
         </div>
 
 

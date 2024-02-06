@@ -6,10 +6,8 @@
 
 @section('content')
     <main>
-        <p>Home</p>
-
-        <div>
-        <img src="{{ asset('assets/placeholder.jpg') }}" alt="placeholder" id="restaurant">
+        <div id="restaurantInfo">
+        <img src="{{ asset('assets/inside-view.jpg') }}" alt="inside view" id="insideView">
             <h2 class="title">About Us</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus voluptas illo voluptatem numquam fugit placeat expedita alias sint molestiae praesentium magni, earum neque culpa quo ad aspernatur. Reprehenderit, amet omnis!
             Officia repudiandae nobis accusamus, eaque dolorum ex harum eos temporibus quae fuga neque praesentium similique necessitatibus illo quaerat. Dolores nam illum earum ipsa culpa voluptates eaque quae repudiandae, corporis nihil?
@@ -31,7 +29,7 @@
                 </ul>
             </div>
 
-            <img src="{{ asset('assets/map-location.webp') }}" alt="placeholder">
+            <img src="{{ asset('assets/map-location.webp') }}" alt="map location">
         </div>
 
         

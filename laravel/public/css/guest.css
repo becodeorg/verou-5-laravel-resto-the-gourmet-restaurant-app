@@ -1,3 +1,7 @@
 #contactInfo {
     display: flex;
 }
+
+#insideView {
+    width: 35%;
+}

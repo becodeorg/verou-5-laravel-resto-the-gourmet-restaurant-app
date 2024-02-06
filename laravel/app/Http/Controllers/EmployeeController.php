@@ -3,13 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
     public function index ()
     {
-        return view('employee');
+        $reservations = Reservation::all();
+
+        $events = [];
+
+        foreach ($reservations as $reservation) {
+
+            $event = [
+                'title' => $reservation->name,
+                'start' => $reservation->timestamp,
+                'customField' => $reservation->notes 
+            ];
+
+            $events[] = $event;
+        }
+        return view('employee')->with('events', $events);
     }
     public function login (Request $request) 
     {

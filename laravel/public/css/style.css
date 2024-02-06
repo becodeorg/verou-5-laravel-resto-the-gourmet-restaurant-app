@@ -28,6 +28,20 @@ main {
     padding-top: 10px;
 }
 
+body::-webkit-scrollbar {
+    width: .4em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    color: black;
+    background-color: white;
+    outline: 1px solid black;
+}
+
 /* WELCOME */
 .header {
     display: flex;
@@ -238,16 +252,31 @@ hr {
     margin-bottom: 8px;
 }
 
+.reservationForm textarea {
+    resize: none;
+    width: 100%;
+}
+
+textarea::-webkit-scrollbar {
+    width: .2em;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    color: black;
+    background-color: white;
+    outline: 1px solid black;
+}
+
 .reservationForm input[type="submit"] {
 
 }
 
 #reservationTable{
     width: 50px;
-}
-
-.reservationFullWidth{
-    width: 100%;
 }
 
 .reservationHalfWidth{

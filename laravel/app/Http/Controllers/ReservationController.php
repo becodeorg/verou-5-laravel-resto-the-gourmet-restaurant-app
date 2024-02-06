@@ -51,7 +51,38 @@ class ReservationController extends Controller
         $reservation = Reservation::find($id);
         $tables = Table::all();
 
+        $date = Carbon::parse($reservation->timestamp)->toDateString();
+        $time = Carbon::parse($reservation->timestamp)->format('H:i');
+
         if ($reservation) 
-            return view('employee.edit', ['reservation' => $reservation, 'tables' => $tables]);
+            return view('employee.edit', ['reservation' => $reservation, 'tables' => $tables, 'date' => $date, 'time' => $time]);
+    }
+
+    public function update(ReservationRequest $request, $id)
+    {
+        $name = $request->reservationName;
+        $email = $request->reservationEmail;
+        $date = $request->reservationDate;
+        $time = $request->reservationTime;
+        $table = $request->reservationTable;
+        $notes = $request->reservationNotes;
+
+        $dateTime = $date . ' ' . $time . ':00';
+        $carbonDateTime = Carbon::parse($dateTime);
+        $timestamp = $carbonDateTime;
+
+        $reservation = Reservation::find($id);
+
+        if ($reservation) {
+            $reservation->update([
+                'name' => $name,
+                'email' => $email,
+                'timestamp' => $timestamp,
+                'table_id' => $table,
+                'notes' => $notes
+            ]);
+        }
+
+        return redirect()->route("homeEmployee");
     }
 }

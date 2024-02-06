@@ -1,19 +1,19 @@
-@extends('layout.guest.layout')
+@extends('layout.employee.layout')
 
 @section('title')
-    {{ env('APP_NAME') . ' - Reserve' }}
+    {{ env('APP_NAME') . ' - Edit Reservation' }}
 @endsection
 
 @section('content')
     <main>
-        <form action="{{ route('reservations.store') }}" method="POST">
+        <form action="{{ route('reservations.update', $reservation->table_id) }}" method="POST">
             @csrf
             <label for="reservationName">Name:</label><br>
-            <input type="text" name="reservationName" id="reservationName"><br>
+            <input type="text" name="reservationName" id="reservationName" value="{{ $reservation->name }}"><br>
             <label for="reservationEmail">Email:</label><br>
-            <input type="email" name="reservationEmail" id="reservationEmail"><br>
+            <input type="email" name="reservationEmail" id="reservationEmail" value="{{ $reservation->email }}"><br>
             <label for="reservationDate">Date:</label><br>
-            <input type="date" name="reservationDate" id="reservationDate"><br>
+            <input type="date" name="reservationDate" id="reservationDate" value="{{ $reservation->timestamp }}"><br>
             <label for="reservationTime">Hour:</label><br>
             <select name="reservationTime" id="reservationTime">
                 <option value="18:00">18:00</option>
@@ -29,7 +29,7 @@
             <label for="reservationTable">Table:</label><br>
             <select name="reservationTable" id="reservationTable">
                 @foreach ($tables as $table)
-                    <option value="{{ $table->id }}">Table: {{ $table->seats }} seats</option>
+                    <option value="{{ $table->id }}" {{ $reservation->table_id === $table->id ? 'selected' : '' }}>Table: {{ $table->seats }} seats</option>
                 @endforeach
             </select><br>
             <label for="reservationNotes">Notes:</label><br>

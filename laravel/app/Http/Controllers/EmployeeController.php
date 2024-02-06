@@ -15,11 +15,11 @@ class EmployeeController extends Controller
         $events = [];
 
         foreach ($reservations as $reservation) {
-
             $event = [
                 'title' => $reservation->name,
                 'start' => $reservation->timestamp,
-                'customField' => $reservation->notes 
+                'id' => $reservation->id,
+                'notes' => $reservation->notes
             ];
 
             $events[] = $event;

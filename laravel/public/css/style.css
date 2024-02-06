@@ -47,6 +47,26 @@ body::-webkit-scrollbar-thumb {
     border-radius: 2px;
 }
 
+p, td {
+    font-size: 22px;
+}
+
+h1 {
+    font-size: max(5vw, 28px);
+}
+
+h2 {
+    font-size: max(4.5vw, 26px);
+}
+
+h3 {
+    font-size: max(4vw, 24px);
+}
+
+h4 {
+    font-size: max(3.5vw, 22px);
+}
+
 /* LANDING */
 .header {
     display: flex;
@@ -218,16 +238,13 @@ body::-webkit-scrollbar-thumb {
 hr {
     border-color: rgb(140, 140, 140);
     width: 80%;
+    opacity: 60%;
 }
 
 /* GUEST HOME */
-.guestImage {
-    width: 100%;
-}
-
 .homeWrapper {
-
-    margin-bottom: 40px;
+    width: 80%;
+    margin: auto auto 40px auto;
 }
 
 #restaurantInfo {
@@ -238,12 +255,60 @@ hr {
     background-position-y: 40%;
     background-attachment: fixed;
     min-height: 400px;
-    padding: 40px;
+    padding: 0px 40px 40px 40px;
     overflow: hidden;
     border: solid white 3px;
     border-radius: 10px;
-    margin-bottom: 40px;
+
+    text-shadow: 1px 1px 3px black;
 }
+
+#restaurantInfo p {
+    max-width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.guestTitle {
+    width: 100%;
+}
+
+.contactWrapper {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contactInfo {
+    padding: 0px 40px;
+}
+
+.contactInfo a {
+    width: fit-content;
+    margin: auto;
+}
+
+.hoursTable, td, th {
+    border: 1px solid white;
+    background-color: black;
+    border-collapse: collapse;
+    padding: 4px 8px;
+    text-align: center;
+}
+
+td { 
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.guestMap {
+    max-height: 700px;
+    min-height: 600px; 
+    filter: drop-shadow(0px 0px 3px white);
+    overflow-x: visible;
+    aspect-ratio: 1;
+  }
 
 /* RESERVATION FORM */
 .reservationWrapper {

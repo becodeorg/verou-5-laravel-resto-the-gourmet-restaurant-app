@@ -8,12 +8,14 @@
     <main class='menu-bg'>
         <figure class="chef-warning">
             <img src="{{ asset('assets/the-gourmet.webp') }}" alt="">
-            <figcaption>Don't order off menu...!</figcaption>
+            <figcaption>Don't order off-menu...!</figcaption>
         </figure>
 
         <section class='menu-category'>
-            <h3 class='menu-header'>Alcoholic Beverages</h3>
-            <img class='menu-icon' src="{{ asset('assets/icon-drinks2.png') }}" alt="">
+            <div class='menu-header-wrap'>
+                <img class='menu-icon' src="{{ asset('assets/icon-drinks2.png') }}" alt="">
+                <h3 class='menu-header'>Alcoholic Beverages</h3>
+            </div>
             <menu class='menu-list'>
             @foreach ($products
             ->where('category', 'Drinks')
@@ -33,8 +35,10 @@
         
 
         <section class='menu-category'>
-            <h3 class='menu-header'>Non-alcoholic Beverages</h3>
-            <img class='menu-icon' src="{{ asset('assets/icon-drinks1.png') }}" alt="">
+            <div class='menu-header-wrap'>
+                <img class='menu-icon' src="{{ asset('assets/icon-drinks1.png') }}" alt="">
+                <h3 class='menu-header'>Non-alcoholic Beverages</h3>
+            </div>
             <menu class='menu-list'>
             @foreach ($products
             ->where('category', 'Drinks')
@@ -52,8 +56,10 @@
         <hr>
 
         <section class='menu-category'>
-            <h3 class='menu-header'>Appetizers</h3>
-            <img class='menu-icon' src="{{ asset('assets/icon-appetizers.png') }}" alt="">
+            <div class='menu-header-wrap'>
+                <img class='menu-icon' src="{{ asset('assets/icon-appetizers.png') }}" alt="">
+                <h3 class='menu-header'>Appetizers</h3>
+            </div>
             <menu class='menu-list'>
             @foreach ($products
             ->where('category', 'Appetizers') as $item)
@@ -70,8 +76,10 @@
         <hr>
 
         <section class='menu-category'>
-            <h3 class='menu-header'>Soups</h3>
-            <img class='menu-icon' src="{{ asset('assets/icon-soups.png') }}" alt="">
+            <div class='menu-header-wrap'>
+                <img class='menu-icon' src="{{ asset('assets/icon-soups.png') }}" alt="">
+                <h3 class='menu-header'>Soups</h3>
+            </div>
             <menu class='menu-list'>
             @foreach ($products
             ->where('category', 'Soups') as $item)
@@ -88,8 +96,10 @@
         <hr>
 
         <section class='menu-category'>
-            <h3 class='menu-header'>Salads</h3>
-            <img class='menu-icon' src="{{ asset('assets/icon-salads.png') }}" alt="">
+            <div class='menu-header-wrap'>
+                <img class='menu-icon' src="{{ asset('assets/icon-salads.png') }}" alt="">
+                <h3 class='menu-header'>Salads</h3>
+            </div>
             <menu class='menu-list'>
             @foreach ($products
             ->where('category', 'Salads') as $item)
@@ -106,8 +116,10 @@
         <hr>
 
         <section class='menu-category'>
-            <h3 class='menu-header'>Main Courses</h3>
-            <img class='menu-icon' src="{{ asset('assets/icon-maincourses.png') }}" alt="">
+            <div class='menu-header-wrap'>
+                <img class='menu-icon' src="{{ asset('assets/icon-maincourses.png') }}" alt="">
+                <h3 class='menu-header'>Main Courses</h3>
+            </div>
             <menu class='menu-list'>
             @foreach ($products
             ->where('category', 'Main Courses') as $item)
@@ -124,8 +136,10 @@
         <hr>
 
         <section class='menu-category'>
-            <h3 class='menu-header'>Desserts</h3>
-            <img class='menu-icon' src="{{ asset('assets/icon-desserts.png') }}" alt="">
+            <div class='menu-header-wrap'>
+                <img class='menu-icon' src="{{ asset('assets/icon-desserts.png') }}" alt="">
+                <h3 class='menu-header'>Desserts</h3>
+            </div>
             <menu class='menu-list'>
             @foreach ($products
             ->where('category', 'Desserts') as $item)

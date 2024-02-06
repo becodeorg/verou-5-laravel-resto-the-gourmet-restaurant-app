@@ -1,11 +1,11 @@
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     * {
         text-align: center;
         list-style-type: none;
         padding: 0px;
     }
 
-    .guestImage {
+    .guestMap {
       max-width: 100%;
       height: auto; 
     }
@@ -15,14 +15,15 @@
   }
   
 
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     #contactInfo {
         display: flex;
     }
 
-    .guestImage {
-      max-width: 45%;
+    .guestMap {
+      /* max-width: 45%; */
       height: auto; 
+      filter: drop-shadow(0px 0px 3px white);
     }
 
   }

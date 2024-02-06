@@ -13,6 +13,10 @@ body {
     background-color: black;
     font-family: 'Futura';
     color: white;
+    background-image: url('/assets/parchment.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .homepage-body {
@@ -40,9 +44,10 @@ body::-webkit-scrollbar-thumb {
     color: black;
     background-color: white;
     outline: 1px solid black;
+    border-radius: 2px;
 }
 
-/* WELCOME */
+/* LANDING */
 .header {
     display: flex;
     margin: 10px 5px;
@@ -137,13 +142,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* MENU */
-body {
-    background-image: url('/assets/parchment.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .chef-warning {
     margin: auto;
     width: min-content;
@@ -222,6 +220,31 @@ hr {
     width: 80%;
 }
 
+/* GUEST HOME */
+.guestImage {
+    width: 100%;
+}
+
+.homeWrapper {
+
+    margin-bottom: 40px;
+}
+
+#restaurantInfo {
+    background-image: url('/assets/tavern.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: center;
+    background-position-y: 40%;
+    background-attachment: fixed;
+    min-height: 400px;
+    padding: 40px;
+    overflow: hidden;
+    border: solid white 3px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
 /* RESERVATION FORM */
 .reservationWrapper {
     display: flex;
@@ -255,6 +278,7 @@ hr {
 .reservationForm textarea {
     resize: none;
     width: 100%;
+    margin-bottom: 0px;
 }
 
 textarea::-webkit-scrollbar {
@@ -269,14 +293,15 @@ textarea::-webkit-scrollbar-thumb {
     color: black;
     background-color: white;
     outline: 1px solid black;
+    border-radius: 2px;
 }
 
 .reservationForm input[type="submit"] {
-
+    float: right;
 }
 
 #reservationTable{
-    width: 50px;
+    width: 125px;
 }
 
 .reservationHalfWidth{

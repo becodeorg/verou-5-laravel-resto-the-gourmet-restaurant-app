@@ -33,7 +33,7 @@
                 @endforeach
             </select><br>
             <label for="reservationNotes">Notes:</label><br>
-            <textarea class='reservationFullWidth' name="reservationNotes" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some.."></textarea><br>
+            <textarea name="reservationNotes" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some.."></textarea><br>
             <input class="button" type="submit" value="Make Reservation">
         </form>
     </main>

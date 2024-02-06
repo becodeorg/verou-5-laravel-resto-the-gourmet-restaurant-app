@@ -6,7 +6,7 @@
 
 @section('content')
     <main>
-        <form action="{{ route('reservations.update', $reservation->table_id) }}" method="POST">
+        <form action="{{ route('reservations.update', $reservation->id) }}" method="POST">
             @csrf
             @method('PUT')
             <label for="reservationName">Name:</label><br>

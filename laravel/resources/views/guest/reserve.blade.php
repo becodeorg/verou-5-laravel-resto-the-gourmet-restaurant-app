@@ -29,7 +29,7 @@
             <label for="reservationTable">Table:</label><br>
             <select name="reservationTable" id="reservationTable">
                 @foreach ($tables as $table)
-                    <option value="{{ $table->id }}">Table: {{ $table->seats }} seats</option>
+                    <option value="{{ $table->id }}">{{ $table->id }}: {{ $table->seats }} seats</option>
                 @endforeach
             </select><br>
             <label for="reservationNotes">Notes:</label><br>

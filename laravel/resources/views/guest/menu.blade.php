@@ -23,7 +23,7 @@
                 <li>
                     <div>
                         <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" alt=""></p>
+                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
                         <p class='item-allergies'>{{ $item->allergies }}</p>
                     </div>
                 </li>
@@ -46,7 +46,7 @@
                 <li>
                     <div>
                         <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" alt=""></p>
+                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
                         <p class='item-allergies'>{{ $item->allergies }}</p>
                     </div>
                 </li>
@@ -66,7 +66,7 @@
                 <li>
                     <div>
                         <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" alt=""></p>
+                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
                         <p class='item-allergies'>{{ $item->allergies }}</p>
                     </div>
                 </li>
@@ -86,7 +86,7 @@
                 <li>
                     <div>
                         <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" alt=""></p>
+                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
                         <p class='item-allergies'>{{ $item->allergies }}</p>
                     </div>
                 </li>
@@ -106,7 +106,7 @@
                 <li>
                     <div>
                         <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" alt=""></p>
+                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
                         <p class='item-allergies'>{{ $item->allergies }}</p>
                     </div>
                 </li>
@@ -126,7 +126,7 @@
                 <li>
                     <div>
                         <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" alt=""></p>
+                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
                         <p class='item-allergies'>{{ $item->allergies }}</p>
                     </div>
                 </li>
@@ -146,7 +146,7 @@
                 <li>
                     <div>
                         <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" alt=""></p>
+                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Tamriel"></p>
                         <p class='item-allergies'>{{ $item->allergies }}</p>
                     </div>
                 </li>

@@ -52,19 +52,19 @@ p, td {
 }
 
 h1 {
-    font-size: max(5vw, 28px);
+    font-size: max(5vw, 30px);
 }
 
 h2 {
-    font-size: max(4.5vw, 26px);
+    font-size: max(4.5vw, 27px);
 }
 
 h3 {
-    font-size: max(4vw, 24px);
+    font-size: max(4vw, 25px);
 }
 
 h4 {
-    font-size: max(3.5vw, 22px);
+    font-size: max(3.5vw, 23px);
 }
 
 /* LANDING */
@@ -214,6 +214,7 @@ h4 {
     width: 50px;
     height: 50px;
     display: inline-block;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
 }
 
 .item-name {
@@ -228,11 +229,16 @@ h4 {
     width: 20%;
 }
 
+.priceIcon {
+    height: 20px;
+    width: 20px;
+    margin: auto auto auto 3px;
+}
+
 .item-allergies {
     display: inline-flex;
     width: 20%;
 }
-
 
 
 hr {

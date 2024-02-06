@@ -1,7 +1,24 @@
-#contactInfo {
-    display: flex;
-}
+@media (max-width: 767px) {
+    * {
+        text-align: center;
+        list-style-type: none;
+    }
 
-#insideView {
-    width: 35%;
-}
+    .guestImage {
+      max-width: 100%;
+      height: auto; 
+    }
+  }
+  
+
+  @media (min-width: 768px) {
+    #contactInfo {
+        display: flex;
+    }
+
+    .guestImage {
+      max-width: 45%;
+      height: auto; 
+    }
+
+  }

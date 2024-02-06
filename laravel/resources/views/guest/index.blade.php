@@ -7,7 +7,7 @@
 @section('content')
     <main>
         <div id="restaurantInfo">
-        <img src="{{ asset('assets/inside-view.jpg') }}" alt="inside view" id="insideView">
+        <img src="{{ asset('assets/inside-view.jpg') }}" alt="inside view" class="guestImage">
             <h2 class="title">About Us</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus voluptas illo voluptatem numquam fugit placeat expedita alias sint molestiae praesentium magni, earum neque culpa quo ad aspernatur. Reprehenderit, amet omnis!
             Officia repudiandae nobis accusamus, eaque dolorum ex harum eos temporibus quae fuga neque praesentium similique necessitatibus illo quaerat. Dolores nam illum earum ipsa culpa voluptates eaque quae repudiandae, corporis nihil?
@@ -19,17 +19,17 @@
             <div>
                 <h2 class="title">Contact</h2>
                 <ul>
-                    <li>Monday : 12:00 - 23:00</li>
-                    <li>Tuesday : 12:00 - 23:00</li>
-                    <li>Wednesday : 12:00 - 23:00</li>
-                    <li>Thurstday : 12:00 - 23:00</li>
-                    <li>Friday : 12:00 - 23:00</li>
-                    <li>Saturtad : 12:00 - 23:00</li>
-                    <li>Sunday : 12:00 - 23:00</li>
+                    <li>Monday : CLOSED</li>
+                    <li>Tuesday : 18:00 - 23:00</li>
+                    <li>Wednesday : 18:00 - 23:00</li>
+                    <li>Thurstday : 18:00 - 23:00</li>
+                    <li>Friday : 18:00 - 23:00</li>
+                    <li>Saturtad : 18:00 - 23:00</li>
+                    <li>Sunday : CLOSED</li>
                 </ul>
             </div>
 
-            <img src="{{ asset('assets/map-location.webp') }}" alt="map location">
+            <img src="{{ asset('assets/map-location.webp') }}" alt="map location" class="guestImage">
         </div>
 
         

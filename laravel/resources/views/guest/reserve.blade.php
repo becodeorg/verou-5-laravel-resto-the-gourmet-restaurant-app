@@ -13,7 +13,7 @@
             <label for="reservationEmail">Email:</label><br>
             <input type="email" name="reservationEmail" id="reservationEmail" class="reservationHalfWidth"><br>
             <label for="reservationDate">Date:</label><br>
-            <input type="date" name="reservationDate" id="reservationDate" min="{{ date('Y-m-d') }}"><br>
+            <input type="date" name="reservationDate" id="reservationDate" min="{{ date('Y-m-d') }}" value="{{ date('Y-m-d') }}"><br>
             <label for="reservationTime">Hour:</label><br>
             <select name="reservationTime" id="reservationTime">
                 <option value="18:00">18:00</option>

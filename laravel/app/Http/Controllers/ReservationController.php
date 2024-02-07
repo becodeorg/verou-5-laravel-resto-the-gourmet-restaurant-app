@@ -19,6 +19,7 @@ class ReservationController extends Controller
     public function create()
     {
         $tables = Table::all();
+
         return view("guest.reserve", ["tables" => $tables]);
     }
 
@@ -89,7 +90,7 @@ class ReservationController extends Controller
     public function destroy($id)
     {
         Reservation::destroy($id);
-        
+
         return redirect()->route("homeEmployee");
     }
 }

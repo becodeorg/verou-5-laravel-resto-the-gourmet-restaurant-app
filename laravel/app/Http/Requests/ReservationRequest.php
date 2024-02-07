@@ -26,7 +26,7 @@ class ReservationRequest extends FormRequest
             'reservationEmail' => 'required|email|max:255',
             'reservationDate' => 'required|date',
             'reservationTime' => 'required|date_format:H:i',
-            'reservationTable' => 'required|exists:tables,id', // assuming 'tables' is the name of your table model
+            'reservationTable' => 'required|exists:tables,id',
             'reservationNotes' => 'nullable|string',
         ];
     }

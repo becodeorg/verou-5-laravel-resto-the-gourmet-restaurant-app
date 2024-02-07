@@ -19,8 +19,9 @@ class ReservationController extends Controller
     public function create()
     {
         $tables = Table::all();
-
-        return view("guest.reserve", ["tables" => $tables]);
+        $reservations = Reservation::with('table')->get();
+        
+        return view("guest.reserve", ["tables" => $tables, 'reservations' => $reservations]);
     }
 
     public function store(ReservationRequest $request)
@@ -49,14 +50,15 @@ class ReservationController extends Controller
 
     public function edit($id)
     {
-        $reservation = Reservation::find($id);
+        $reservations = Reservation::with('table')->get();
+        $reservation = Reservation::with('table')->find($id);
         $tables = Table::all();
 
         $date = Carbon::parse($reservation->timestamp)->toDateString();
         $time = Carbon::parse($reservation->timestamp)->format('H:i');
 
         if ($reservation) 
-            return view('employee.edit', ['reservation' => $reservation, 'tables' => $tables, 'date' => $date, 'time' => $time]);
+            return view('employee.edit', ['reservations' => $reservations, 'reservation' => $reservation, 'tables' => $tables, 'date' => $date, 'time' => $time]);
     }
 
     public function update(ReservationRequest $request, $id)

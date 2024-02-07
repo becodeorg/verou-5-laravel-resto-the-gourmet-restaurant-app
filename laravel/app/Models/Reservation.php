@@ -16,4 +16,9 @@ class Reservation extends Model
         'table_id',
         'notes',
     ];
+
+    public function table()
+    {
+        return $this->belongsTo(Table::class);
+    }
 }

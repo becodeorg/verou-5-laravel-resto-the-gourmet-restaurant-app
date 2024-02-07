@@ -8,7 +8,7 @@
     <main class='menu-bg'>
         <figure class="chef-warning">
             <img src="{{ asset('assets/the-gourmet.webp') }}" alt="">
-            <figcaption>Don't order off-menu...!</figcaption>
+            <figcaption class="chef-warning-caption">Don't order off-menu...!</figcaption>
         </figure>
 
         <section class='menu-category'>
@@ -21,10 +21,10 @@
             ->where('category', 'Drinks')
             ->where('has_alcohol', 1) as $item)
                 <li>
-                    <div>
-                        <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
-                        <p class='item-allergies'>{{ $item->allergies }}</p>
+                    <div class='item-wrap'>
+                        <h4 class='item-attribute'>{{ $item->name }}</h4>
+                        <p class='item-attribute'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="price-icon" alt="A gold septim, the currency used in Skyrim"></p>
+                        <p class='item-attribute'>{{ $item->allergies }}</p>
                     </div>
                 </li>
             @endforeach
@@ -44,10 +44,10 @@
             ->where('category', 'Drinks')
             ->where('has_alcohol', 0) as $item)
                 <li>
-                    <div>
-                        <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
-                        <p class='item-allergies'>{{ $item->allergies }}</p>
+                    <div class='item-wrap'>
+                        <h4 class='item-attribute'>{{ $item->name }}</h4>
+                        <p class='item-attribute'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="price-icon" alt="A gold septim, the currency used in Skyrim"></p>
+                        <p class='item-attribute'>{{ $item->allergies }}</p>
                     </div>
                 </li>
             @endforeach
@@ -64,10 +64,10 @@
             @foreach ($products
             ->where('category', 'Appetizers') as $item)
                 <li>
-                    <div>
-                        <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
-                        <p class='item-allergies'>{{ $item->allergies }}</p>
+                    <div class='item-wrap'>
+                        <h4 class='item-attribute'>{{ $item->name }}</h4>
+                        <p class='item-attribute'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="price-icon" alt="A gold septim, the currency used in Skyrim"></p>
+                        <p class='item-attribute'>{{ $item->allergies }}</p>
                     </div>
                 </li>
             @endforeach
@@ -84,10 +84,10 @@
             @foreach ($products
             ->where('category', 'Soups') as $item)
                 <li>
-                    <div>
-                        <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
-                        <p class='item-allergies'>{{ $item->allergies }}</p>
+                    <div class='item-wrap'>
+                        <h4 class='item-attribute'>{{ $item->name }}</h4>
+                        <p class='item-attribute'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="price-icon" alt="A gold septim, the currency used in Skyrim"></p>
+                        <p class='item-attribute'>{{ $item->allergies }}</p>
                     </div>
                 </li>
             @endforeach
@@ -104,10 +104,10 @@
             @foreach ($products
             ->where('category', 'Salads') as $item)
                 <li>
-                    <div>
-                        <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
-                        <p class='item-allergies'>{{ $item->allergies }}</p>
+                    <div class='item-wrap'>
+                        <h4 class='item-attribute'>{{ $item->name }}</h4>
+                        <p class='item-attribute'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="price-icon" alt="A gold septim, the currency used in Skyrim"></p>
+                        <p class='item-attribute'>{{ $item->allergies }}</p>
                     </div>
                 </li>
             @endforeach
@@ -124,10 +124,10 @@
             @foreach ($products
             ->where('category', 'Main Courses') as $item)
                 <li>
-                    <div>
-                        <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Skyrim"></p>
-                        <p class='item-allergies'>{{ $item->allergies }}</p>
+                    <div class='item-wrap'>
+                        <h4 class='item-attribute'>{{ $item->name }}</h4>
+                        <p class='item-attribute'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="price-icon" alt="A gold septim, the currency used in Skyrim"></p>
+                        <p class='item-attribute'>{{ $item->allergies }}</p>
                     </div>
                 </li>
             @endforeach
@@ -144,10 +144,10 @@
             @foreach ($products
             ->where('category', 'Desserts') as $item)
                 <li>
-                    <div>
-                        <h4 class='item-name'>{{ $item->name }}</h4>
-                        <p class='item-price'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="priceIcon" alt="A gold septim, the currency used in Tamriel"></p>
-                        <p class='item-allergies'>{{ $item->allergies }}</p>
+                    <div class='item-wrap'>
+                        <h4 class='item-attribute'>{{ $item->name }}</h4>
+                        <p class='item-attribute'>{{ $item->price }}  <img src="{{ asset('assets/GoldIcon.webp') }}" class="price-icon" alt="A gold septim, the currency used in Tamriel"></p>
+                        <p class='item-attribute'>{{ $item->allergies }}</p>
                     </div>
                 </li>
             @endforeach

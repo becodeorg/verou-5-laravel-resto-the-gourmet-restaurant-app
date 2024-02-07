@@ -13,12 +13,12 @@
         </figure>
         <h1 class="header-h1">The Gourmet's Gourmet Gourmet</h1>
     </header>
-    <main class='welcomeForms'>
+    <main class='welcome-forms'>
         <form class='flex-around' action="{{ route('guest') }}" method="POST">
             @csrf
             <input class='button' type="submit" value="Continue as Guest">
         </form>
-        <form class='welcomeForm-employee flex-around' action="{{ route('loginEmployee') }}" method="POST">
+        <form class='welcome-form-employee flex-around' action="{{ route('loginEmployee') }}" method="POST">
             @csrf
             <label for='employeeName'>Username:</label>
             <input name='employeeName' id='employeeName' type='text' value="Kelsey"> 

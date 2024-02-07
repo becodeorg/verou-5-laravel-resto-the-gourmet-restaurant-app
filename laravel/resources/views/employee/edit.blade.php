@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <main>
-        <form action="{{ route('reservations.update', $reservation->id) }}" method="POST">
+    <main class="reservationWrapper">
+        <form class='reservationForm' action="{{ route('reservations.update', $reservation->id) }}" method="POST">
             @csrf
             @method('PUT')
             <label for="reservationName">Name:</label><br>
@@ -35,7 +35,7 @@
             </select><br>
             <label for="reservationNotes">Notes:</label><br>
             <textarea name="reservationNotes" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some..">{{ $reservation->notes }}</textarea><br>
-            <input type="submit" value="Make Reservation">
+            <input type="submit" value="Edit Reservation">
         </form>
     </main>
 @endsection

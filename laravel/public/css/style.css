@@ -67,6 +67,10 @@ h4 {
     font-size: max(3.5vw, 23px);
 }
 
+footer {
+    z-index: 50;
+}
+
 /* LANDING */
 .header {
     display: flex;

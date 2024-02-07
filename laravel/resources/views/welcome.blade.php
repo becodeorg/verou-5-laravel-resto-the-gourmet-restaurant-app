@@ -21,9 +21,9 @@
         <form class='welcomeForm-employee flex-around' action="{{ route('loginEmployee') }}" method="POST">
             @csrf
             <label for='employeeName'>Username:</label>
-            <input name='employeeName' id='employeeName' type='text'> 
+            <input name='employeeName' id='employeeName' type='text' value="Kelsey"> 
             <label for='employeePass'>Password:</label>
-            <input name='employeePass' id='employeePass' type='password'> 
+            <input name='employeePass' id='employeePass' type='password' value="opensesame"> 
             <input class='button' type="submit" value="Continue as Employee">
         </form>
     </main>

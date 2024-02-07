@@ -10,15 +10,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $user = User::where('email', "kelsey@thegourmet.com")->first();
-
-        if (!$user) {
-            User::create([
-                'name' => 'Kelsey',
-                'email' => 'kelsey@thegourmet.com',
-                'password' => Hash::make('opensesame')
-            ]);
-        } 
         return view('welcome');
     }
 }

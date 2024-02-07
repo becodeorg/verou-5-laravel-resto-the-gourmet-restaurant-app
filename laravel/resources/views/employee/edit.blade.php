@@ -30,7 +30,7 @@
             <label for="reservationTable">Table:</label><br>
             <select name="reservationTable" id="reservationTable">
                 @foreach ($tables as $table)
-                    <option value="{{ $table->id }}" {{ $reservation->table_id === $table->id ? 'selected' : '' }}>Table: {{ $table->seats }} seats</option>
+                    <option value="{{ $table->id }}" {{ $reservation->table_id === $table->id ? 'selected' : '' }}>Table {{ $table->id }}: {{ $table->seats }} seats</option>
                 @endforeach
             </select><br>
             <label for="reservationNotes">Notes:</label><br>

@@ -17,7 +17,7 @@ class TableFactory extends Factory
     public function definition(): array
     {
         return [
-            'seats' => fake()->numberBetween(1, 50)
+            'seats' => fake()->numberBetween(2, 8)
         ];
     }
 }

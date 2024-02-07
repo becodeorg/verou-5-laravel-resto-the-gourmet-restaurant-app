@@ -16,10 +16,13 @@ class ReservationFactory extends Factory
      */
     public function definition(): array
     {
+        $today = now()->toDateTimeString();
+        $futureDateTime = now()->addDays(rand(1, 30))->toDateTimeString(); 
+
         return [
             'name' => fake()->name(),
             'email' =>fake()->email(),
-            'timestamp' =>fake()->dateTime(),
+            'timestamp' =>fake()->dateTimeBetween($today, $futureDateTime),
             'notes' =>fake()->text(),
             'table_id' =>fake()->numberBetween(1, 5)
         ];

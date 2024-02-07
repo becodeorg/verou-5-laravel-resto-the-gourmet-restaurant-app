@@ -35,7 +35,12 @@
             </select><br>
             <label for="reservationNotes">Notes:</label><br>
             <textarea name="reservationNotes" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some..">{{ $reservation->notes }}</textarea><br>
-            <input type="submit" value="Edit Reservation">
+            <input class="button" type="submit" value="Edit Reservation">
+        </form>
+        <form action="{{ route('reservations.destroy', $reservation->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <input class="button" type="submit" value="Cancel Reservation">
         </form>
     </main>
 @endsection

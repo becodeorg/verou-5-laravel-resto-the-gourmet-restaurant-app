@@ -85,4 +85,11 @@ class ReservationController extends Controller
 
         return redirect()->route("homeEmployee");
     }
+
+    public function destroy($id)
+    {
+        Reservation::destroy($id);
+        
+        return redirect()->route("homeEmployee");
+    }
 }

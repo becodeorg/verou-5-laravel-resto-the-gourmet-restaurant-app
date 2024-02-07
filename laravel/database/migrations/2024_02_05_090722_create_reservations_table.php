@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->timestamp('timestamp');
             $table->foreignId('table_id');
-            $table->text('notes');
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }

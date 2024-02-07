@@ -14,7 +14,7 @@
             <label for="reservationEmail">Email:</label><br>
             <input type="email" name="reservationEmail" id="reservationEmail" value="{{ $reservation->email }}"><br>
             <label for="reservationDate">Date:</label><br>
-            <input type="date" name="reservationDate" id="reservationDate" value="{{ $date }}"><br>
+            <input type="date" name="reservationDate" id="reservationDate" value="{{ $date }}" min="{{ date('Y-m-d') }}"><br>
             <label for="reservationTime">Hour:</label><br>
             <select name="reservationTime" id="reservationTime">
                 <option value="18:00" {{ $time == "18:00" ? 'selected' : '' }}>18:00</option>

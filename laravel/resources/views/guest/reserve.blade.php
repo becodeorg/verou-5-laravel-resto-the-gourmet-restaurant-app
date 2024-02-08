@@ -77,22 +77,22 @@
         <form class='reservationForm' action="{{ route('reservations.store') }}" method="POST">
             @csrf
             <label for="reservationName">Name:</label><br>
-            <input type="text" name="reservationName" id="reservationName" class="reservationHalfWidth" value="{{ old('reservationName') }}"><br>
+            <input type="text" name="reservationName" class="reservation-form-fields" id="reservationName" class="reservationHalfWidth" value="{{ old('reservationName') }}"><br>
             @if($errors->has('reservationName'))
                 <p>{{ $errors->first('reservationName') }}</p>
             @endif
             <label for="reservationEmail">Email:</label><br>
-            <input type="email" name="reservationEmail" id="reservationEmail" class="reservationHalfWidth" value="{{ old('reservationEmail') }}"><br>
+            <input type="email" name="reservationEmail" class="reservation-form-fields" id="reservationEmail" class="reservationHalfWidth" value="{{ old('reservationEmail') }}"><br>
             @if($errors->has('reservationEmail'))
                 <p>{{ $errors->first('reservationEmail') }}</p>
             @endif
             <label for="reservationDate">Date:</label><br>
-            <input type="date" name="reservationDate" id="reservationDate" min="{{ date('Y-m-d') }}" value="{{ date('Y-m-d') }}"><br>
+            <input type="date" name="reservationDate" class="reservation-form-fields" id="reservationDate" min="{{ date('Y-m-d') }}" value="{{ date('Y-m-d') }}"><br>
             @if($errors->has('reservationDate'))
                 <p>{{ $errors->first('reservationDate') }}</p>
             @endif
             <label for="reservationTime">Hour:</label><br>
-            <select name="reservationTime" id="reservationTime">
+            <select name="reservationTime" class="reservation-form-fields" id="reservationTime">
                 <option value="18:00" {{ old('reservationTime') == "18:00" ? 'selected' : '' }}>18:00</option>
                 <option value="19:30" {{ old('reservationTime') == "19:30" ? 'selected' : '' }}>19:30</option>   
                 <option value="21:00" {{ old('reservationTime') == "21:00" ? 'selected' : '' }}>21:00</option> 
@@ -101,13 +101,13 @@
                 <p>{{ $errors->first('reservationTime') }}</p>
             @endif
             <label for="reservationTable">Table:</label><br>
-            <select name="reservationTable" id="reservationTable">
+            <select name="reservationTable" class="reservation-form-fields" id="reservationTable">
             </select><br>
             @if($errors->has('reservationTable'))
                 <p>{{ $errors->first('reservationTable') }}</p>
             @endif
             <label for="reservationNotes">Notes:</label><br>
-            <textarea name="reservationNotes" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some..">{{ old('reservationNotes') }}</textarea><br>
+            <textarea name="reservationNotes" class="reservation-form-fields" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some..">{{ old('reservationNotes') }}</textarea><br>
             @if($errors->has('reservationNotes'))
                 <p>{{ $errors->first('reservationNotes') }}</p>
             @endif

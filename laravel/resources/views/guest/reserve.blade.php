@@ -77,12 +77,12 @@
         <form class='reservationForm' action="{{ route('reservations.store') }}" method="POST">
             @csrf
             <label for="reservationName">Name:</label><br>
-            <input type="text" name="reservationName" class="reservation-form-fields" id="reservationName" class="reservationHalfWidth" value="{{ old('reservationName') }}"><br>
+            <input type="text" name="reservationName" class="reservation-form-fields reservationHalfWidth" id="reservationName" class="reservationHalfWidth" value="{{ old('reservationName') }}"><br>
             @if($errors->has('reservationName'))
                 <p>{{ $errors->first('reservationName') }}</p>
             @endif
             <label for="reservationEmail">Email:</label><br>
-            <input type="email" name="reservationEmail" class="reservation-form-fields" id="reservationEmail" class="reservationHalfWidth" value="{{ old('reservationEmail') }}"><br>
+            <input type="email" name="reservationEmail" class="reservation-form-fields reservationHalfWidth" id="reservationEmail" class="reservationHalfWidth" value="{{ old('reservationEmail') }}"><br>
             @if($errors->has('reservationEmail'))
                 <p>{{ $errors->first('reservationEmail') }}</p>
             @endif

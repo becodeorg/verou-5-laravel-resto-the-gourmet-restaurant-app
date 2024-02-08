@@ -83,12 +83,12 @@
             @csrf
             @method('PUT')
             <label for="reservationName">Name:</label><br>
-            <input type="text" name="reservationName" class="reservation-form-fields" id="reservationName" value="{{ $reservation->name }}"><br>
+            <input type="text" name="reservationName" class="reservation-form-fields reservationHalfWidth" id="reservationName" value="{{ $reservation->name }}"><br>
             @if($errors->has('reservationName'))
                 <p>{{ $errors->first('reservationName') }}</p>
             @endif
             <label for="reservationEmail">Email:</label><br>
-            <input type="email" name="reservationEmail" class="reservation-form-fields" id="reservationEmail" value="{{ $reservation->email }}"><br>
+            <input type="email" name="reservationEmail" class="reservation-form-fields reservationHalfWidth" id="reservationEmail" value="{{ $reservation->email }}"><br>
             @if($errors->has('reservationEmail'))
                 <p>{{ $errors->first('reservationEmail') }}</p>
             @endif

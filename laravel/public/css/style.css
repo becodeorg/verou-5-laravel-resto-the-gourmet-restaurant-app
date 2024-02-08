@@ -478,7 +478,7 @@ textarea::-webkit-scrollbar-thumb {
 
 .reservationHalfWidth{
     width: 50%;
-    min-width: 200px;
+    min-width: 300px;
 } 
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -550,4 +550,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin: 0px 5%;
         width: 90%;
     }
+
+    .reservationHalfWidth{
+        width: 50%;
+        min-width: 200px;
+    } 
 }

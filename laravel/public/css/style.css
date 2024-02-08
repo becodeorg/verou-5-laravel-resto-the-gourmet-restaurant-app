@@ -205,6 +205,11 @@ footer {
     width: 80%;
 }
 
+.fc-event {
+    max-height: 25%;
+    font-size: max(1.5vw, 12px);
+}
+
 .fc-scroller::-webkit-scrollbar {
     width: 0px;
 }

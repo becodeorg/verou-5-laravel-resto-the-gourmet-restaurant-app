@@ -18,7 +18,7 @@
             omitZeroMinutes: 'false',
             hour12: false
         },
-        conteintHeight: "auto",
+        contentHeight: "auto",
         eventClick: function(info) {
             let locationString = '{{ route("reservations.edit", ":reservationId") }}';
             locationString = locationString.replace(":reservationId", info.event.id);

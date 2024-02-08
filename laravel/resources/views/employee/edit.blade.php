@@ -91,14 +91,8 @@
             <label for="reservationTime">Hour:</label><br>
             <select name="reservationTime" id="reservationTime">
                 <option value="18:00" {{ $time == "18:00" ? 'selected' : '' }}>18:00</option>
-                <option value="18:30" {{ $time == "18:30" ? 'selected' : '' }}>18:30</option>  
-                <option value="19:00" {{ $time == "19:00" ? 'selected' : '' }}>19:00</option>  
-                <option value="19:30" {{ $time == "19:30" ? 'selected' : '' }}>19:30</option>  
-                <option value="20:00" {{ $time == "20:00" ? 'selected' : '' }}>20:00</option>  
-                <option value="20:30" {{ $time == "20:30" ? 'selected' : '' }}>20:30</option>  
+                <option value="19:30" {{ $time == "19:30" ? 'selected' : '' }}>19:30</option>   
                 <option value="21:00" {{ $time == "21:00" ? 'selected' : '' }}>21:00</option>  
-                <option value="21:30" {{ $time == "21:30" ? 'selected' : '' }}>21:30</option>  
-                <option value="22:00" {{ $time == "22:00" ? 'selected' : '' }}>22:00</option>  
             </select><br>
             <label for="reservationTable">Table:</label><br>
             <select name="reservationTable" id="reservationTable">

@@ -23,8 +23,9 @@ class ReservationFactory extends Factory
         $timestamp = fake()->dateTimeBetween($startTime, $endTime)->format('Y-m-d H:i:s');
         $timestamp = Carbon::createFromFormat('Y-m-d H:i:s', $timestamp);
 
-        $timestamp->setHour(random_int(18, 21));
-        $timestamp->setMinute(random_int(0, 1) * 30);
+        $times = ["18:00", "19:30", "21:00"];
+        $randomTime = $times[random_int(0, 2)];
+        $timestamp->setTime(explode(':', $randomTime)[0] , explode(':', $randomTime)[1]);
 
         return [
             'name' => fake()->name(),

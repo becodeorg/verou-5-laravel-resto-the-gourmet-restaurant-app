@@ -72,6 +72,10 @@ h4 {
     font-size: min(7vw, 25px);
 }
 
+label {
+    font-size: min(6vw, 24px);
+}
+
 footer {
     z-index: 50;
     position: fixed;
@@ -113,8 +117,18 @@ footer {
 .header-ul {
     display: flex;
     list-style-type: none;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
     margin-top: 0px;
+}
+
+.header-ul li {
+    width: 33%;
+    display: flex;
+}
+
+.header-ul a {
+    margin: auto;
 }
 
 .welcome-forms {
@@ -375,8 +389,8 @@ td {
 }
 
 .reservationForm {
-    min-width: 50%;
-    max-width: 90%;
+    min-width: 65%;
+    max-width: 95%;
     max-height: fit-content;
     justify-content: space-between;
     color: white;
@@ -384,7 +398,7 @@ td {
     border: double white 5px;
     border-radius: 10px;
     padding: 5px 15px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .reservationForm input, select, textarea {
@@ -427,6 +441,7 @@ textarea::-webkit-scrollbar-thumb {
 
 .reservationHalfWidth{
     width: 50%;
+    min-width: 200px;
 } 
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -480,15 +495,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width: 100%;
     }
 
-    .chef-warning img {
-
-    }
-
     .menu-list {
         width: 90%;
     }
     
     p.item-attribute {
         width: 25%;
+    }
+
+    .reservationForm {
+        padding: 0px;
+        margin-bottom: 60px;
+        width: 100%;
     }
 }

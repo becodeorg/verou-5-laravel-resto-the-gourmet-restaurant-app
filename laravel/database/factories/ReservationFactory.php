@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +21,7 @@ class ReservationFactory extends Factory
         $endTime = now()->addDays(30)->toDateTimeString();
 
         $timestamp = fake()->dateTimeBetween($startTime, $endTime)->format('Y-m-d H:i:s');
-        $timestamp = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $timestamp);
+        $timestamp = Carbon::createFromFormat('Y-m-d H:i:s', $timestamp);
 
         $timestamp->setHour(random_int(18, 21));
         $timestamp->setMinute(random_int(0, 1) * 30);

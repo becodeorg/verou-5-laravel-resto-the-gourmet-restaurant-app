@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'The Gourmet - Guest')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/guest.css') }}">
+    @yield('scripts')
 </head>
 <body>
     @include('layout.guest.header')

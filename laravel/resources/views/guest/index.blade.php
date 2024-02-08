@@ -50,7 +50,7 @@
 
         
         <article class="contact-info">
-            <h2>Reservations</h2>
+            <h2 class="guest-title">Reservations</h2>
             <a href="{{ route('reservations.create') }}" class="button">Reservation</a>
         </article>
 

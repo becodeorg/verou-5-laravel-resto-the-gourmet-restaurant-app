@@ -105,7 +105,10 @@
             </select><br>
             <label for="reservationNotes">Notes:</label><br>
             <textarea name="reservationNotes" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some..">{{ $reservation->notes }}</textarea><br>
-            <input class="button" type="submit" value="Edit Reservation">
+            <div>
+                <a href="{{ route('homeEmployee') }}" class="button">Back</a>
+                <input class="button" type="submit" value="Edit Reservation">
+            </div>
         </form>
         <form action="{{ route('reservations.destroy', $reservation->id) }}" method="POST">
             @csrf

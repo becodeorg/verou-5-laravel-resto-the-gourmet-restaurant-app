@@ -84,21 +84,39 @@
             @method('PUT')
             <label for="reservationName">Name:</label><br>
             <input type="text" name="reservationName" id="reservationName" value="{{ $reservation->name }}"><br>
+            @if($errors->has('reservationName'))
+                <p>{{ $errors->first('reservationName') }}</p>
+            @endif
             <label for="reservationEmail">Email:</label><br>
             <input type="email" name="reservationEmail" id="reservationEmail" value="{{ $reservation->email }}"><br>
+            @if($errors->has('reservationEmail'))
+                <p>{{ $errors->first('reservationEmail') }}</p>
+            @endif
             <label for="reservationDate">Date:</label><br>
             <input type="date" name="reservationDate" id="reservationDate" value="{{ $date }}" min="{{ date('Y-m-d') }}"><br>
+            @if($errors->has('reservationDate'))
+                <p>{{ $errors->first('reservationDate') }}</p>
+            @endif
             <label for="reservationTime">Hour:</label><br>
             <select name="reservationTime" id="reservationTime">
                 <option value="18:00" {{ $time == "18:00" ? 'selected' : '' }}>18:00</option>
                 <option value="19:30" {{ $time == "19:30" ? 'selected' : '' }}>19:30</option>   
                 <option value="21:00" {{ $time == "21:00" ? 'selected' : '' }}>21:00</option>  
             </select><br>
+            @if($errors->has('reservationTime'))
+                <p>{{ $errors->first('reservationTime') }}</p>
+            @endif
             <label for="reservationTable">Table:</label><br>
             <select name="reservationTable" id="reservationTable">
             </select><br>
+            @if($errors->has('reservationTable'))
+                <p>{{ $errors->first('reservationTable') }}</p>
+            @endif
             <label for="reservationNotes">Notes:</label><br>
             <textarea name="reservationNotes" id="reservationNotes" cols="30" rows="10" placeholder="Add some notes if you have some..">{{ $reservation->notes }}</textarea><br>
+            @if($errors->has('reservationNotes'))
+                <p>{{ $errors->first('reservationNotes') }}</p>
+            @endif
             <div>
                 <a href="{{ route('homeEmployee') }}" class="button">Back</a>
                 <input class="button" type="submit" value="Edit Reservation">

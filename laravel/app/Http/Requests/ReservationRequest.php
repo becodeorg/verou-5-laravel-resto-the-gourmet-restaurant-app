@@ -31,11 +31,11 @@ class ReservationRequest extends FormRequest
                 function ($attribute, $value, $fail) {
                     $date = Carbon::parse($value);
                     if ($date->dayOfWeek === 1 || $date->dayOfWeek === 0) {
-                        $fail("The $attribute must not be a Monday or Sunday.");
+                        $fail("We are closed on Monday or Sunday.");
                     }
                 },
             ],
-            'reservationTime' => 'required|date_format:H:i',
+            'reservationTime' => 'required|in:18:00,19:30,21:00',
             'reservationTable' => 'required|exists:tables,id',
             'reservationNotes' => 'nullable|string',
         ];

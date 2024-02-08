@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ReservationRequest extends FormRequest
@@ -24,7 +25,16 @@ class ReservationRequest extends FormRequest
         return [
             'reservationName' => 'required|string|max:255',
             'reservationEmail' => 'required|email|max:255',
-            'reservationDate' => 'required|date',
+            'reservationDate' => [
+                'required',
+                'date',
+                function ($attribute, $value, $fail) {
+                    $date = Carbon::parse($value);
+                    if ($date->dayOfWeek === 1 || $date->dayOfWeek === 0) {
+                        $fail("The $attribute must not be a Monday or Sunday.");
+                    }
+                },
+            ],
             'reservationTime' => 'required|date_format:H:i',
             'reservationTable' => 'required|exists:tables,id',
             'reservationNotes' => 'nullable|string',

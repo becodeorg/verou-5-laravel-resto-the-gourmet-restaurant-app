@@ -13,6 +13,7 @@
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         validRange: {start:"{{now()}}"},
+        hiddenDays: [ 0, 1 ],
         eventTimeFormat: {
             hour: '2-digit',
             minute: '2-digit',

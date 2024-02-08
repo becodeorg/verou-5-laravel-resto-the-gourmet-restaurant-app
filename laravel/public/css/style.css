@@ -262,6 +262,7 @@ footer {
     width: 100%;
     aspect-ratio: 500 / 366;
     scale: 1.2;
+    filter: drop-shadow(-1px -1px 1px white);
 }
 
 .chef-warning-caption {

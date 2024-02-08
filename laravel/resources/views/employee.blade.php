@@ -12,13 +12,14 @@
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
+        validRange: {start:"{{now()}}"},
         eventTimeFormat: {
             hour: '2-digit',
             minute: '2-digit',
             omitZeroMinutes: 'false',
             hour12: false
         },
-        conteintHeight: "auto",
+        contentHeight: "auto",
         eventClick: function(info) {
             let locationString = '{{ route("reservations.edit", ":reservationId") }}';
             locationString = locationString.replace(":reservationId", info.event.id);

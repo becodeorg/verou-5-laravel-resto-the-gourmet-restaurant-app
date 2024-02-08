@@ -12,6 +12,7 @@
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
+        validRange: {start:"{{now()}}"},
         eventTimeFormat: {
             hour: '2-digit',
             minute: '2-digit',

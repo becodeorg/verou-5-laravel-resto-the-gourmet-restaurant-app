@@ -7,7 +7,7 @@
         <ul class="header-ul">
             <li><a class='button' href="{{ route('guest') }}">Home</a></li>
             <li><a class='button' href="{{ route('menu') }}">Menu</a></li>
-            <li><a class='button' href="{{ route('reservations.create') }}">Reserve Table</a></li>
+            <li><a class='button reserve-button' href="{{ route('reservations.create') }}">Reserve Table</a></li>
         </ul>
     </nav>
 </header>

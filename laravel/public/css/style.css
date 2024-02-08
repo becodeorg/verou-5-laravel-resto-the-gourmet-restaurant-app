@@ -162,7 +162,26 @@ footer {
     background-color: rgb(90, 90, 90);
 }
 
+.button:active {
+    scale: 0.9;
+}
 
+.reserve-button {
+    color: black;
+    background-color: white;
+    border: black double 5px;
+}
+
+.reserve-button:hover {
+    color: white;
+    border-color: white;
+    scale: 1.2;
+    background-color: rgb(90, 90, 90);
+}
+
+.reserve-button:active {
+    scale: 0.9;
+}
 
 .fc-event:hover {
     background-color: white;

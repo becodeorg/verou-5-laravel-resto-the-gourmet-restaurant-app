@@ -387,7 +387,9 @@ td {
 /* RESERVATION FORM */
 .reservationWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .reservationForm {

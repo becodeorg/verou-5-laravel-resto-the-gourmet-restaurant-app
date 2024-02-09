@@ -24,6 +24,9 @@
             <input name='employeeName' id='employeeName' type='text' value="Kelsey"> 
             <label for='employeePass'>Password:</label>
             <input name='employeePass' id='employeePass' type='password' value="opensesame"> 
+            @if($errors->has('employeePass'))
+                <p>{{ $errors->first('employeePass') }}</p>
+            @endif
             <input class='button' type="submit" value="Continue as Employee">
         </form>
     </main>

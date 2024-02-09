@@ -32,8 +32,6 @@
         </section>
         <hr>
 
-        
-
         <section class='menu-category'>
             <div class='menu-header-wrap'>
                 <img class='menu-icon' src="{{ asset('assets/icon-drinks1.png') }}" alt="">

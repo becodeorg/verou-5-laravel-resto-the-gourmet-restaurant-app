@@ -30,7 +30,7 @@ Route::prefix('guest')->group(function() {
 });
 
 Route::prefix('employee')->group(function() {
-    Route::get('/', [EmployeeController::class, "index"])->name('homeEmployee');
+    Route::get('/', [EmployeeController::class, "index"])->name('homeEmployee')->middleware('auth');
 });
 
-Route::resource('/reservations', ReservationController::class);
+Route::resource('/reservations', ReservationController::class)->middleware('auth');

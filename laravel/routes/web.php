@@ -33,4 +33,4 @@ Route::prefix('employee')->group(function() {
     Route::get('/', [EmployeeController::class, "index"])->name('homeEmployee')->middleware('auth');
 });
 
-Route::resource('/reservations', ReservationController::class)->middleware('auth');
+Route::resource('/reservations', ReservationController::class);

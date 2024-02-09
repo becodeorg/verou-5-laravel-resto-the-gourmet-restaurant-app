@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'create']);
+    }
+    
     public function index ()
     {
 
